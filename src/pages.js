@@ -1,8 +1,8 @@
-import TestingFrontend from 'components/TestingFrontend';
-import Counter from 'components/Counter';
-import Stack from 'components/Stack';
-import UserForm from 'components/UserForm';
-import Integration from 'components/Integration';
-import Mocks from 'components/Mocks';
+import Start from 'components/Start';
+import ThemeSpecification from 'components/ThemeSpecification';
+import StyledSystem from 'components/StyledSystem';
+import Variants from 'components/Variants';
+import AcessandoTema from 'components/AcessandoTema';
+import Mocks from 'components/Responsive';
 
-export default [TestingFrontend, Counter, Integration, Stack, UserForm, Mocks];
+export default [Start, ThemeSpecification, AcessandoTema, StyledSystem, Variants, Mocks];
