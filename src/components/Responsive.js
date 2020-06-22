@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import SystemProvider from 'components/SystemProvider';
 import { layout, system } from 'styled-system';
 
-function Mocks() {
+function Responsive() {
   return (
     <Fragment>
       <h1>Responsividade</h1>
@@ -71,7 +71,7 @@ function Mocks() {
   );
 }
 
-export default Mocks;
+export default Responsive;
 
 const Box = styled.div(
   css({
