@@ -134,7 +134,7 @@ const columns12 = system({
 
 const Col12 = styled.div(
   css({
-    px: 3,
+    px: 2,
     display: 'flex',
     flexDirection: 'column',
     mb: 1,
