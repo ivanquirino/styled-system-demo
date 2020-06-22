@@ -4,6 +4,7 @@ import css from '@styled-system/css';
 import styled from 'styled-components';
 import SystemProvider from 'components/SystemProvider';
 import { layout, system } from 'styled-system';
+import { range } from 'ramda';
 
 function Responsive() {
   return (
@@ -21,7 +22,7 @@ function Responsive() {
           <Col>
             <Box>BOX 2</Box>
           </Col>
-          <Col width={[1, null,  1 / 2]}>
+          <Col width={[1, null, 1 / 2]}>
             <Box>BOX 3</Box>
           </Col>
           <Col width={1}>
@@ -53,18 +54,13 @@ function Responsive() {
           <Col2>
             <Box>BOX 8</Box>
           </Col2>
-          <Col2>
-            <Box>BOX 9</Box>
-          </Col2>
-          <Col2>
-            <Box>BOX 10</Box>
-          </Col2>
-          <Col2>
-            <Box>BOX 11</Box>
-          </Col2>
-          <Col2>
-            <Box>BOX 12</Box>
-          </Col2>
+        </Row>
+        <Row>
+          {range(1, 13).map((n) => (
+            <Col12 size={{ _: 12, md: 6, lg: 1 }}>
+              <Box>COL {n}</Box>
+            </Col12>
+          ))}
         </Row>
       </SystemProvider>
     </Fragment>
@@ -105,7 +101,6 @@ const Row = styled.div(
   })
 );
 
-
 const columns = system({
   col: {
     property: 'width',
@@ -115,7 +110,7 @@ const columns = system({
       return scale[value] || (value < 1 ? `${value * 100}%` : `${value}px`);
     },
   },
-})
+});
 
 const Col2 = styled.div(
   css({
@@ -124,8 +119,25 @@ const Col2 = styled.div(
     flexDirection: 'column',
     mb: 1,
   }),
-  columns,
+  columns
 );
 Col2.defaultProps = {
-  col: { _: 1, md: 6, lg: 12},
+  col: { _: 1, md: 4, lg: 8 },
 };
+
+const columns12 = system({
+  size: {
+    property: 'width',
+    scale: 'columns12',
+  },
+});
+
+const Col12 = styled.div(
+  css({
+    px: 3,
+    display: 'flex',
+    flexDirection: 'column',
+    mb: 1,
+  }),
+  columns12
+);

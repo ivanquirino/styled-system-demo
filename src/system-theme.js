@@ -36,9 +36,10 @@ breakpoints.lg = breakpoints[3];
 breakpoints.xl = breakpoints[4];
 
 const percent = (value) => `${(1 / value) * 100}%`;
-
 const columns = [0, ...range(1, 13).map(percent)];
-console.log(columns)
+
+const col12 = (value) => `${(value / 12) * 100}%`;
+const columns12 = [0, ...range(1, 13).map(col12)];
 
 const theme = {
   colors,
@@ -48,6 +49,7 @@ const theme = {
   space,
   breakpoints,
   columns,
+  columns12
 };
 
 export default theme;
