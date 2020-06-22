@@ -21,7 +21,7 @@ function Mocks() {
           <Col>
             <Box>BOX 2</Box>
           </Col>
-          <Col width={[1, 1 / 2]}>
+          <Col width={[1, null,  1 / 2]}>
             <Box>BOX 3</Box>
           </Col>
           <Col width={1}>
@@ -93,7 +93,7 @@ const Col = styled.div(
 );
 
 Col.defaultProps = {
-  width: [1, 1 / 2, 1 / 4],
+  width: [1, null, 1 / 2, 1 / 4],
 };
 
 const Row = styled.div(
