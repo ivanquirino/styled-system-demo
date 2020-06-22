@@ -122,7 +122,7 @@ const Col2 = styled.div(
   columns
 );
 Col2.defaultProps = {
-  col: { _: 1, md: 4, lg: 8 },
+  col: { _: 1, sm: 2, md: 4, lg: 8 },
 };
 
 const columns12 = system({

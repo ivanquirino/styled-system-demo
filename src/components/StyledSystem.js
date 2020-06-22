@@ -32,6 +32,7 @@ function StyledSystem() {
         </Box>
         <Box2 bg="preto">Isso é outra caixa</Box2>
         <Box3>Isso é uma caixa diferente</Box3>
+        <Box3>Caixa padrão</Box3>
         <Box3 bg="verde" color="preto">
           Isso é uma caixa diferente
         </Box3>

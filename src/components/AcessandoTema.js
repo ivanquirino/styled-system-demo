@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import SystemProvider from 'components/SystemProvider';
-import themeGet from '@styled-system/theme-get';
+import get from '@styled-system/theme-get';
 import css from '@styled-system/css';
 
 function AcessandoTema() {
@@ -26,10 +26,10 @@ const Title = styled.h1`
 `;
 
 const Title2 = styled.h1`
-  font-family: ${themeGet('fonts.body', 'serif')};
-  font-size: ${themeGet('fontSizes.large')};
-  color: ${themeGet('colors.amarelo')};
-  background-color: ${themeGet('colors.preto')};
+  font-family: ${get('fonts.body', 'serif')};
+  font-size: ${get('fontSizes.large')};
+  color: ${get('colors.amarelo')};
+  background-color: ${get('colors.preto')};
 `;
 
 const Title3 = styled.h1(
