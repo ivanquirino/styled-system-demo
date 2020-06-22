@@ -26,10 +26,14 @@ const fonts = {
   body: 'sans-serif',
   title: 'serif',
 };
-const breakpoints = ['40em', '52em', '64em'];
-breakpoints.sm = breakpoints[0];
-breakpoints.md = breakpoints[1];
-breakpoints.lg = breakpoints[2];
+
+const breakpoints = ['320px', '560px', '960px', '1280px', '1920px'];
+
+breakpoints.xs = breakpoints[0];
+breakpoints.sm = breakpoints[1];
+breakpoints.md = breakpoints[2];
+breakpoints.lg = breakpoints[3];
+breakpoints.xl = breakpoints[4];
 
 const percent = (value) => `${(1 / value) * 100}%`;
 

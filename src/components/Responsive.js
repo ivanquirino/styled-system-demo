@@ -105,6 +105,18 @@ const Row = styled.div(
   })
 );
 
+
+const columns = system({
+  col: {
+    property: 'width',
+    scale: 'columns',
+    transform: (value, scale) => {
+      if (value === 0) return 0;
+      return scale[value] || (value < 1 ? `${value * 100}%` : `${value}px`);
+    },
+  },
+})
+
 const Col2 = styled.div(
   css({
     px: 3,
@@ -112,17 +124,8 @@ const Col2 = styled.div(
     flexDirection: 'column',
     mb: 1,
   }),
-  system({
-    col: {
-      property: 'width',
-      scale: 'columns',
-      transform: (value, scale) => {
-        if (value === 0) return 0;
-        return scale[value] || (value < 1 ? `${value * 100}%` : `${value}px`);
-      },
-    },
-  })
+  columns,
 );
 Col2.defaultProps = {
-  col: [1, 6, 12],
+  col: { _: 1, md: 6, lg: 12},
 };

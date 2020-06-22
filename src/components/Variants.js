@@ -1,15 +1,7 @@
 /** @jsx jsx */
-import { jsx, Button, Input, Label, Text } from 'theme-ui';
+import { jsx } from 'theme-ui';
 import styled from 'styled-components';
-import {
-  typography,
-  color,
-  space,
-  layout,
-  flexbox,
-  compose,
-  variant,
-} from 'styled-system';
+import { variant } from 'styled-system';
 import SystemProvider from 'components/SystemProvider';
 import css from '@styled-system/css';
 

@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { Fragment, useState } from 'react';
-import { jsx, Input, Button, Label, Flex } from 'theme-ui';
+import { Fragment } from 'react';
+import React from 'react';
 
 function ThemeSpecification() {
   return (
